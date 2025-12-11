@@ -3,7 +3,7 @@ import {
   buscarLivro,
   marcarDisponivel,
   marcarEmprestado
-} from "../dao/livrosDAO.js";
+} from "../dao/livrosDao.js";
 
 import {
   criarEmprestimo,

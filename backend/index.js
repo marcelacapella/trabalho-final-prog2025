@@ -14,6 +14,10 @@ app.use("/livros", livrosRoutes);
 app.use("/emprestimos", emprestimoRoutes);
 
 // Iniciar servidor
-app.listen(3000, () => {
-  console.log("Servidor rodando em http://localhost:3000");
-});
+if (process.env.VERCEL) {
+  // Não inicia servidor — Vercel usa Serverless
+} else {
+  app.listen(3000, () => console.log("rodando local"));
+}
+
+export default app;
