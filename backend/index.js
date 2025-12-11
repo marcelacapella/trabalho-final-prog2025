@@ -12,6 +12,8 @@ app.use(express.json());
 
 app.use("/livros", livrosRoutes);
 app.use("/emprestimos", emprestimoRoutes);
+app.use(express.static("public"));
+
 
 // Iniciar servidor
 if (process.env.VERCEL) {
